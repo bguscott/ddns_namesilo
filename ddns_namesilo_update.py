@@ -22,7 +22,6 @@ print("Current IP address from akamai: %s \n" % current)
 
 #read xml file
 r = requests.get(RECORD_IP_ADDRESS_URL, allow_redirects=True)
-
 xml = ET.fromstring(r.content)
 
 #begin parsing xml for correct host (DOMAIN)
@@ -41,6 +40,7 @@ for record in xml.iter("resource_record"):
 			if (value == current):
 				print("Current IP address matches namesilo record for %s \n" % host)
 				break
+				
 			#IP addresses don’t match, let’s update it
 			else:
 				print("IP addresses do not match, generating URL to update")
