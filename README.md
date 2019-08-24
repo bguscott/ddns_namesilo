@@ -1,2 +1,2 @@
 # ddns_namesilo
-Automated NameSilo DNS record update on current IP
+Automated NameSilo DNS record update with current IP
