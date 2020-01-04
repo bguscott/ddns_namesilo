@@ -16,7 +16,7 @@ Just update the script with your NameSilo API key, desired domain or subdomain n
 2. Edit ddns_namesilo_update.py and change the variables ot suit your environment:
     * `API_KEY` - (from NameSilo account page)
     * `DOMAIN` - domain name (e.g., `"example.com"`)
-    * `SUB_DOMAIN` - sub domains of DOMAIN in a list format (e.g., `["wiki","mail"]`)
+    * `SUB_DOMAIN` - sub domains of `DOMAIN` in list format (e.g., `["wiki","mail"]`)
 3. Create a cron job to run the script, being mindful of API limits of the provider. E.g.,:
 
     ```*/5 * * * * root /usr/local/bin/python2.7 <path to file>/ddns_namesilo_update.py | /usr/bin/logger -t ddns_namesilo_update```
