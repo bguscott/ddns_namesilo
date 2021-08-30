@@ -10,10 +10,10 @@
 #	Just set up cron (e.g., every 30 minutes) with something similar to:
 #		/usr/local/bin/python3.7 /usr/local/ddns_namesilo_update.py | /usr/bin/logger -t ddns_namesilo_update
 #
-# Must install requests package first
-# python3 -m ensurepip
-# python3 -m pip install requests
-# python3 -m pip install --upgrade pip
+# Must install requests package first and update pip:
+# 	python3 -m ensurepip
+# 	python3 -m pip install requests
+# 	python3 -m pip install --upgrade pip
 
 import requests
 import xml.etree.ElementTree as ET
