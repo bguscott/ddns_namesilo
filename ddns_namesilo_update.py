@@ -6,8 +6,8 @@
 #	NameSilo DNS records and subdomains with your current IP. If a subdomain is provided that doesn't exist,
 #	it's created in the process.
 #
-#	Works well setup as a script in pfsense (or similar) for remote access to your home network. 
-#	Just set up cron (e.g., every 30 minutes) with something similar to:
+#	Works well setup as a script in pfsense (or similar) for remote access to your home network. Just set up
+#	cron (e.g., every 30 minutes) with something similar to:
 #		/usr/local/bin/python3.7 /usr/local/ddns_namesilo_update.py | /usr/bin/logger -t ddns_namesilo_update
 #
 # Must install requests package first and update pip:
