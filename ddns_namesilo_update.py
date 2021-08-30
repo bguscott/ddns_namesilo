@@ -16,6 +16,7 @@
 # 		python3 -m ensurepip
 # 		python3 -m pip install requests
 # 		python3 -m pip install --upgrade pip
+#	- xml module
 
 import requests
 import xml.etree.ElementTree as ET
