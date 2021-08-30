@@ -6,17 +6,21 @@
 #	NameSilo DNS records and subdomains with your current IP. If a subdomain is provided that doesn't exist,
 #	it's created in the process.
 #
+#	Works well setup as a script in pfsense (or similar) for remote access to your home network. 
+#	Just set up cron (e.g., every 30 minutes) with something similar to:
+#		/usr/local/bin/python3.7 /usr/local/ddns_namesilo_update.py | /usr/bin/logger -t ddns_namesilo_update
+#
 # Must install requests package first
-# python2.7 -m ensurepip
-# python2.7 -m pip install requests
-# python2.7 -m pip install –-upgrade pip
+# python3 -m ensurepip
+# python3 -m pip install requests
+# python3 -m pip install --upgrade pip
 
 import requests
 import xml.etree.ElementTree as ET
 
-API_KEY= ""
-DOMAIN = ""
-SUB_DOMAIN = ["", ""]
+API_KEY= ""		# API key for namesilo
+DOMAIN = "" 		# E.g., "yourdomain.com"
+SUB_DOMAIN = ["", ""] 	# E.g., "mail" for "mail.yourdomain.com"; You can list multiple sub-domains to update
 RECORD_IP_ADDRESS_URL = "https://www.namesilo.com/api/dnsListRecords?version=1&type=xml&key=" + API_KEY + "&domain=" + DOMAIN
 CURRENT_IP_ADDRESS_URL = "http://whatismyip.akamai.com/"
 
