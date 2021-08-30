@@ -18,9 +18,14 @@
 import requests
 import xml.etree.ElementTree as ET
 
+# Update the following variables:
+
 API_KEY= ""		# API key for namesilo
 DOMAIN = "" 		# E.g., "yourdomain.com"
 SUB_DOMAIN = ["", ""] 	# E.g., "mail" for "mail.yourdomain.com"; You can list multiple sub-domains to update
+
+# Do not update any of the below:
+
 RECORD_IP_ADDRESS_URL = "https://www.namesilo.com/api/dnsListRecords?version=1&type=xml&key=" + API_KEY + "&domain=" + DOMAIN
 CURRENT_IP_ADDRESS_URL = "http://whatismyip.akamai.com/"
 
