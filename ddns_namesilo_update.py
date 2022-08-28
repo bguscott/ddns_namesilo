@@ -33,7 +33,7 @@ RECORD_IP_ADDRESS_URL = "https://www.namesilo.com/api/dnsListRecords?version=1&t
 CURRENT_IP_ADDRESS_URL = "http://whatismyip.akamai.com/"
 
 #get current IP address from CURRENT_IP_ADDRESS_URL
-current_ip = requests.get(CURRENT_IP_ADDRESS_URL).content
+current_ip = requests.get(CURRENT_IP_ADDRESS_URL).content.decode("utf-8")
 print("Current IP address from akamai: %s \n" % current_ip)
 
 #read xml file
