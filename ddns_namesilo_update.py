@@ -71,7 +71,7 @@ for record in xml.iter("resource_record"):
 				new = requests.get(new_URL)
 
 				#print the xml reply
-				print(new.content + "\n")
+				print(new.content.decode("utf-8") + "\n")
 				
 				domain_status[domain_i] = "updated"
 				break
@@ -87,7 +87,7 @@ for domain_i in domain_status:
 		new = requests.get(new_URL)
 		
 		#print the xml reply
-		print(new.content + "\n")
+		print(new.content.decode("utf-8") + "\n")
 			
 		domain_status[domain_i] = "updated"
 		break
